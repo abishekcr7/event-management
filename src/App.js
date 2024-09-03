@@ -27,9 +27,6 @@ function App() {
     setUpdateItem(item)
     console.log(updateItem,'updateItem')
   }
-  const fillItem = ()=>{
-
-  }
   return (
     <div className="App">
       <EventForm updateItem={updateItem} onAddEvents={addEventHandler}/>
