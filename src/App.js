@@ -25,7 +25,6 @@ function App() {
   }
   const updateHandler=(item)=>{
     setUpdateItem(item)
-    console.log(updateItem,'updateItem')
   }
   return (
     <div className="App">
