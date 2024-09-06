@@ -10,15 +10,14 @@ function App() {
   const [eventData, setEventData] = useState([]);
   const [updateItem, setUpdateItem] = useState({
     name: "",
-    date: "",
+    date: new Date(),
     location: "",
     description: "",
-    capacity: "",
+    capacity: 0,
   });
   const [updateState, setUpdateState] = useState(false);
   const [updateId, setUpdateId] = useState("");
   const addEventHandler = (event) => {
-    console.log(event);
     const reqOpt = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -29,7 +28,6 @@ function App() {
       reqOpt
     )
       .then((res) => {
-        console.log("success");
         return res.json();
       })
       .then((data) => {
@@ -85,7 +83,6 @@ function App() {
           return res.json();
         })
         .then((data) => {
-          console.log(data, "data");
           fetch(
             "https://eventmanagement-c31e7-default-rtdb.firebaseio.com/event.json"
           )
@@ -93,7 +90,6 @@ function App() {
               return res.json();
             })
             .then((data) => {
-              console.log(data);
               let event = [];
               for (let key in data) {
                 let obj = {};
@@ -120,7 +116,6 @@ function App() {
           event.push(obj);
         }
         setEventData(event);
-        console.log(event, "event");
       });
   }, []);
   return (

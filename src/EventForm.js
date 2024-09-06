@@ -18,7 +18,6 @@ const EventForm = (props) => {
     setLocation(props.updateItem.date);
     setDescripton(props.updateItem.description);
     setUpdateState(props.updateState);
-    console.log(updateState, "updateState");
   };
 
   useEffect(() => {

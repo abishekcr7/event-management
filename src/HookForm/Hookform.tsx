@@ -59,7 +59,6 @@ const EventForm = (props) => {
     capacity: number;
   };
   const updateHandler = () => {
-    console.log("getValues", getValues());
     props.onUpdateEvent(getValues());
     setValue("name", "");
     setValue("date", new Date());
@@ -69,7 +68,6 @@ const EventForm = (props) => {
     setUpdateState(false)
   };
   const fullSubmitHandler = (data: formValues) => {
-    console.log("form submitted", data);
     props.onAddEvents(data);
     setValue("name", "");
     setValue("date", new Date());
@@ -183,6 +181,7 @@ const EventForm = (props) => {
                 // onChange={capacityHandler}
                 type="number"
                 {...register("capacity", {
+                  pattern:{value:/^[0-9]+$/,message:'Only numbers are allowed'},
                   valueAsNumber: true,
                   required: "*Capacity is required",
                 })}

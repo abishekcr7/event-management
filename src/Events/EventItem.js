@@ -7,7 +7,6 @@ const EventItem = (props) => {
     setViewmore(!viewmore);
   };
   const deleteHandler = () => {
-    console.log(props.id,'id')
     props.onDelete(props.id);
   };
   
@@ -21,7 +20,6 @@ const EventItem = (props) => {
       capacity: props.capacity,
       id: props.id,
     };
-    console.log(changeToUpdate,'1')
     props.onUpdate(item,props.id,changeToUpdate)
     window.globalThis.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
