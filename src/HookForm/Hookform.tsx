@@ -181,7 +181,7 @@ const EventForm = (props) => {
                 // onChange={capacityHandler}
                 type="number"
                 {...register("capacity", {
-                  pattern:{value:/^[0-9]+$/,message:'Only numbers are allowed'},
+                  pattern:{value:/^[0-9]+$/,message:'*Only numbers are allowed'},
                   valueAsNumber: true,
                   required: "*Capacity is required",
                 })}

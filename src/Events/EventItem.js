@@ -40,7 +40,7 @@ const EventItem = (props) => {
           <p className="mb-2 text-2xl font-bold tracking-tight text-purple-500 dark:text-purple-500">{props.name}</p>
           <p className="mb-3 font-normal text-white dark:text-white">Date : {props.date}</p>
           <p className="mb-3 font-normal text-white dark:text-white">Location : {props.location}</p>
-          <p className="mb-3 font-normal text-white dark:text-white">Type : {props.description}</p>
+          <p className="mb-3 font-normal text-white dark:text-white">About Event : {props.description}</p>
           <p className="mb-3 font-normal text-white dark:text-white">Capacity : {props.capacity}</p>
           <button className="text-white bg-gray-500 hover:bg-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={viewHandler}>Cancel</button>
           <button className="text-white bg-gray-500 hover:bg-gray-400 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700" onClick={updateHandler}>Update</button>
